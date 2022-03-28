@@ -4,7 +4,7 @@ This is the OpenMP lab for UCLA CS33 Spring 2022. The leading TA of this lab is 
 
 ## Introduction
 
-In this lab, you will using [OpenMP](https://www.openmp.org/) to
+In this lab, you will use [OpenMP](https://www.openmp.org/) to
 parallelize an important kernel which is widely used in DNA sequencing algorithms.
 Before starting this lab, please first make sure you followed some tutorials on
 OpenMP and have the basic understanding.
