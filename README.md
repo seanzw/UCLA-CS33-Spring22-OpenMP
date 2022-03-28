@@ -7,7 +7,7 @@ This is the OpenMP lab for UCLA CS33 Spring 2022. The leading TA of this lab is 
 In this lab, you will using [OpenMP](https://www.openmp.org/) to
 parallelize an important kernel which is widely used in DNA sequencing algorithms.
 Before starting this lab, please first make sure you followed some tutorials on
-OpenMP and has the basic understanding.
+OpenMP and have the basic understanding.
 
 First log into your seas lab server and clone this repo:
 
@@ -46,7 +46,7 @@ Num of threads: 1. Matrix size 8193x8193
 Total time: 0.195 seconds
 ```
 
-The actual running time your machine may be different. Also, it reports the
+The actual running time on your machine may be different. Also, it reports the
 matrix size as `8193x8193` as the algorithm requires padding the matrix by 1.
 
 Now let's run the parallelized version and check if the result is correct.
@@ -67,7 +67,7 @@ Wrong result at 1x1 -2 != 0.
 ```
 
 So the overall goal of this lab is to implement `kernel_omp()` and achieve
-high speedup while still produce the correct result!
+high speedup while still producing the correct result!
 
 You should only edit `kernel_omp.c`. To build parallelized version and run
 it with 4 threads.
@@ -95,7 +95,7 @@ should generate correct result to receive any points.
 NOTE: Please try to solve the lab before reading this hint! It will be
 much more fun and you will learn more if you figure it out by yourself!
 
-The kernel in `kernel_seq.c` has iter-iteration dependence: the iteration
+The kernel in `kernel_seq.c` has inter-iteration dependence: the iteration
 `(i, j)` depends on iteration `(i-1, j)`, `(i, j-1)` and `(i-1, j-1)`.
 This makes it impossible to parallize along rows or columns, as you breaks
 the dependence and will get wrong results.
@@ -112,9 +112,9 @@ computing in the following order:
 ...
 ```
 
-You will have no dependence between elements, and they can be easily
-parallelized. For example, these four elements can be processed
-in parallel:
+You will have no dependence between elements within the same line,
+and they can be easily parallelized. For example, these four elements
+can be processed in parallel:
 
 ```
 (4, 1), (3, 2), (2, 3), (1, 4)
