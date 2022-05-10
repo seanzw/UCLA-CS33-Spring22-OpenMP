@@ -86,8 +86,9 @@ impact on the performance).
 
 We will test with input size `2048x2048` and 4 threads. Your score will
 be proportional to the speedup you achieved, starting from `1.0x` (0 point, no speedup)
-to `3.2x` (100 point). The testing will be conducted on seas lab servers.
-You will get extra point for speedup above `3.2x` (at most 40 extra points).
+to `2.8x` (100 point). The testing will be conducted on seas lab servers.
+For every extra `0.1x` speedup over `2.8x`, you will get extra 1 point
+(at most 5 extra points).
 Also, your implementation should generate correct result to receive any points.
 
 NOTE: For this lab, the evaluation will be conducted on the server
